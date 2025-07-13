@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="|Hello, ${name}!|" />
+
+<ul>
+<li th:each="category : ${categorized}">
+<h2><span th:text="${category.key}"></span></h2>
+  <ul>
+    <li th:each="item : ${category.value}">
+      <span th:text="${item}"/>
+    </li>
+  </ul>
+</li>
+</ul>
+</body>
+</html>
