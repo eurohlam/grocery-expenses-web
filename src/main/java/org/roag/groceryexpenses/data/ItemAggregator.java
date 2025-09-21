@@ -23,7 +23,7 @@ public class ItemAggregator implements Comparable<ItemAggregator>{
 
     @Override
     public String toString() {
-        return String.format("%s (x%d): $%.2f", item, count, total);
+        return String.format("%s | (x%d) | $%.2f", item, count, total);
     }
 
     @Override

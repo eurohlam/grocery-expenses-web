@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 public class CategorizerTest {
 
     @Test
-    void categorizeItem() {
+    void categorizeItemByKeywordMatching() {
         var categorizer = new Categorizer(Categorizer.CATEGORIES_JSON_FILE);
-        Assertions.assertEquals("Meat & Seafood", categorizer.categorizeItem("SNAPPER FILLETS"));
-        Assertions.assertNotEquals("Meat & Seafood", categorizer.categorizeItem("CUCUMBER"));
+        Assertions.assertEquals("Meat & Seafood", categorizer.categorizeItemByKeywordMatching("SNAPPER FILLETS"));
+        Assertions.assertNotEquals("Meat & Seafood", categorizer.categorizeItemByKeywordMatching("CUCUMBER"));
     }
 }

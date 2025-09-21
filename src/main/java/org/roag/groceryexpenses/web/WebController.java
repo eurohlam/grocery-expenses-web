@@ -35,7 +35,7 @@ public class WebController {
     public String categories(@RequestParam(name="name", required=false, defaultValue="Categorized Data") String name, Model model) {
         logger.info("Inside categories controller");
         var items = receiptItemRepository.findAll();
-        var categorized = categorizer.categorizeReceiptItems(items);
+        var categorized = categorizer.categorizeItems(items);
         logger.info("Categorized {}", categorized);
         model.addAttribute("name", name);
         model.addAttribute("categorized", categorized);

@@ -10,11 +10,11 @@
 <ul>
 <li th:each="category : ${categorized}">
 <h2><span th:text="${category.key}"></span></h2>
-  <ul>
+  <ol>
     <li th:each="item : ${category.value}">
-      <span th:text="${item}"/>
+        <span th:text="${item}"/>
     </li>
-  </ul>
+  </ol>
 </li>
 </ul>
 </body>
